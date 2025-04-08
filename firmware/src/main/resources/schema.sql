@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS auto_mobiles (
+    id SERIAL PRIMARY KEY,
+    make VARCHAR(20) NOT NULL,
+    model VARCHAR(20) NOT NULL
+);
