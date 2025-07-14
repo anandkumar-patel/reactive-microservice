@@ -1,6 +1,7 @@
 package fm.controller;
 
 import fm.model.AutoMobile;
+import fm.model.AutoMobilePatchDTO;
 import fm.service.AutoMobileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -43,8 +44,8 @@ public class AutomobileController {
                 .defaultIfEmpty(ResponseEntity.notFound().build());
     }
     @PatchMapping("/{id}")
-    public Mono<ResponseEntity<AutoMobile>> patch(@PathVariable int id, @RequestBody AutoMobile auto) {
-        return service.patchAutoData(id, auto).map(ResponseEntity::ok)
+    public Mono<ResponseEntity<AutoMobile>> patch(@PathVariable int id, @RequestBody AutoMobilePatchDTO autoDTO) {
+        return service.patchAutoData(id, autoDTO).map(ResponseEntity::ok)
                 .defaultIfEmpty(ResponseEntity.notFound().build());
     }
 

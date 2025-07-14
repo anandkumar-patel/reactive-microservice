@@ -1,8 +1,7 @@
 package fm.controller;
 
-import fm.model.AutoMobile;
 import fm.model.House;
-import fm.service.AutoMobileService;
+import fm.service.PropertyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,36 +16,26 @@ import java.util.List;
 public class PropertyController {
 
     @Autowired
-    private AutoMobileService service;
+    private PropertyService service;
 
     @GetMapping
-    public Flux<AutoMobile> getAllAutoData() {
+    public Flux<House> getAllPropertyData() {
         return service.findAll().delayElements(Duration.ofSeconds(3)).log();
     }
 
     @GetMapping("/{id}")
-    public Mono<AutoMobile> getAutoData(@PathVariable int id) {
+    public Mono<House> getPropertyData(@PathVariable int id) {
         return service.findById(id);
     }
 
-    @GetMapping("/make/{make}")
-    public Flux<AutoMobile> getAutoDataByMake(@PathVariable String make) {
-        return service.findByMake(make);
-    }
-
     @PostMapping
-    public Mono<AutoMobile> postAutoData(@RequestBody AutoMobile auto) {
-        return service.createAutoData(auto);
+    public Mono<House> postPropertyData(@RequestBody House house) {
+        return service.createPropertyData(house);
     }
 
     @PutMapping("/{id}")
-    public Mono<ResponseEntity<AutoMobile>> update(@PathVariable int id, @RequestBody AutoMobile auto) {
-        return service.putAutoData(id, auto).map(ResponseEntity::ok)
-                .defaultIfEmpty(ResponseEntity.notFound().build());
-    }
-    @PatchMapping("/{id}")
-    public Mono<ResponseEntity<AutoMobile>> patch(@PathVariable int id, @RequestBody AutoMobile auto) {
-        return service.patchAutoData(id, auto).map(ResponseEntity::ok)
+    public Mono<ResponseEntity<House>> update(@PathVariable int id, @RequestBody House house) {
+        return service.updatePropertyData(id, house).map(ResponseEntity::ok)
                 .defaultIfEmpty(ResponseEntity.notFound().build());
     }
 

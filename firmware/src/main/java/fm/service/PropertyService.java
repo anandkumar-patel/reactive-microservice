@@ -14,38 +14,33 @@ public class PropertyService {
 
     @Autowired
     PropertyMapper mapper;
+
     @Autowired
     private PropertyRepository repository;
 
     public Flux<House> findAll() {
         return repository.findAll().map(mapper::toModel);
     }
-    public Mono<House> findById(int id) {
+
+    public Mono<House> findById(long id) {
         return repository.findById(id)
                 .map(mapper::toModel);
     }
 
-    public Mono<House> createAutoData(House auto) {
-        return repository.save(mapper.toEntity(auto)).map(mapper::toModel);
+    public Mono<House> createPropertyData(House house) {
+        return repository.save(mapper.toEntity(house)).map(mapper::toModel);
     }
 
-    public Mono<House> putAutoData(int id,House auto) {
+    public Mono<House> updatePropertyData(long id,House house) {
         return repository.findById(id)
-                .flatMap(existingProps -> {
-                    PropertyEntity  props = mapper.toEntity(auto);
-                    props.setId(id);
-                    return repository.save(props).map(mapper::toModel);
+                .flatMap(existingProperty -> {
+                    existingProperty.setName(house.getName());
+                    existingProperty.setCity(house.getCity());
+                    return repository.save(existingProperty).map(mapper::toModel);
                 });
     }
-    public Mono<House> patchAutoData(int id,House auto) {
-        return repository.findById(id)
-                .flatMap(existingAuto -> {
-                    mapper.updateEntityFromModel(auto,existingAuto);
-                    return repository.save(existingAuto).map(mapper::toModel);
-                });
-    }
-    public Mono<Void> deleteById(int id) {
+
+    public Mono<Void> deleteById(long id) {
         return repository.deleteById(id);
     }
-
 }

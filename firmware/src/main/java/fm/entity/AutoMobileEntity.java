@@ -12,7 +12,7 @@ import org.springframework.data.relational.core.mapping.Table;
 @Table(name = "auto_mobiles")
 public class AutoMobileEntity {
     @Id
-    private int id;
+    private long id;
     private String make;
     private String model;
 }

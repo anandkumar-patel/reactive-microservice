@@ -1,0 +1,564 @@
+{
+	"info": {
+		"_postman_id": "9c7ba3a7-7b14-40ec-9718-e55407095c33",
+		"name": "reactive-microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40914655"
+	},
+	"item": [
+		{
+			"name": "firmware",
+			"item": [
+				{
+					"name": "auto",
+					"item": [
+						{
+							"name": "auto",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2024/firmware/auto",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"auto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "auto/id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2024/firmware/auto/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"auto",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "auto/make",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2024/firmware/auto/make/hundai",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"auto",
+										"make",
+										"hundai"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "auto",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"make\": \"hundai\",\n    \"model\": \"i10 grand\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/firmware/auto",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"auto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "auto",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"make\": \"hundai\",\n    \"model\": \"santro\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/firmware/auto/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"auto",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "auto",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"model\": \"i30\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/firmware/auto/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"auto",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "auto",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2024/firmware/auto/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"auto",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "props",
+					"item": [
+						{
+							"name": "props",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2024/firmware/props",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"props"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "byId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2024/firmware/props/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"props",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2024/firmware/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "userById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2024/firmware/user/1111",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"user",
+										"1111"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userId\": 1010,\n    \"name\": \"uday\",\n    \"address\": {\n        \"homeNo\": 91,\n        \"street\": \"91/15, hafiza road\",\n        \"detail\": {\n            \"detailId\": 1112,\n            \"country\": \"India\",\n            \"pinCode\": 221545,\n            \"state\": \"UP\"\n        }\n    },\n    \"subjects\": [\n        {\n            \"subjectId\": 11,\n            \"chapters\": 10,\n            \"price\": 34.56,\n            \"name\": \"history\"\n        },\n        {\n            \"subjectId\": 12,\n            \"chapters\": 20,\n            \"price\": 94.52,\n            \"name\": \"physics\"\n        },\n        {\n            \"subjectId\": 13,\n            \"chapters\": 18,\n            \"price\": 84.95,\n            \"name\": \"chemistry\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/firmware/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userId\": 1010,\n    \"name\": \"uday\",\n    \"address\": {\n        \"homeNo\": 91,\n        \"street\": \"91/15, hafiza road\",\n        \"detail\": {\n            \"detailId\": 1112,\n            \"country\": \"India\",\n            \"pinCode\": 221545,\n            \"state\": \"UP\"\n        }\n    },\n    \"subjects\": [\n        {\n            \"subjectId\": 11,\n            \"chapters\": 10,\n            \"price\": 34.56,\n            \"name\": \"history\"\n        },\n        {\n            \"subjectId\": 12,\n            \"chapters\": 20,\n            \"price\": 94.52,\n            \"name\": \"physics\"\n        },\n        {\n            \"subjectId\": 13,\n            \"chapters\": 18,\n            \"price\": 84.95,\n            \"name\": \"chemistry\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/firmware/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2024/firmware/user/1111",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"user",
+										"1111"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userId\": 1010,\n    \"name\": \"uday\",\n    \"address\": {\n        \"homeNo\": 91,\n        \"street\": \"91/15, hafiza road\",\n        \"detail\": {\n            \"detailId\": 1112,\n            \"country\": \"India\",\n            \"pinCode\": 221545,\n            \"state\": \"UP\"\n        }\n    },\n    \"subjects\": [\n        {\n            \"subjectId\": 11,\n            \"chapters\": 10,\n            \"price\": 34.56,\n            \"name\": \"history\"\n        },\n        {\n            \"subjectId\": 12,\n            \"chapters\": 20,\n            \"price\": 94.52,\n            \"name\": \"physics\"\n        },\n        {\n            \"subjectId\": 13,\n            \"chapters\": 18,\n            \"price\": 84.95,\n            \"name\": \"chemistry\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/firmware/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"user"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "policy",
+					"item": [
+						{
+							"name": "getAllPolicy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2024/firmware/policy",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"policy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "policy/id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2024/firmware/policy/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"policy",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"policy_2\",\n    \"startYear\": \"2020\",\n    \"endYear\": \"2040\",\n    \"premium\": 6754.0,\n    \"contents\": [\n        {\n            \"itemId\": 1234,\n            \"itemType\": \"car\",\n            \"coverLimit\": 45645\n        },\n        {\n            \"itemId\": 1932,\n            \"itemType\": \"house\",\n            \"coverLimit\": 546543\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/firmware/policy",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"policy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2024/firmware/policy/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"firmware",
+										"policy",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "capability",
+			"item": [
+				{
+					"name": "users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2026/capability/users/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2026",
+							"path": [
+								"capability",
+								"users",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auto&props",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2026/capability/auto-props/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2026",
+							"path": [
+								"capability",
+								"auto-props",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "experience",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
